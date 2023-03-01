@@ -7,6 +7,7 @@ module.exports = {
       { name: 'STOCK-BULEVAR', createdAt: new Date(), updatedAt: new Date() },
       { name: 'LEOPOLDO GROSS', createdAt: new Date(), updatedAt: new Date() },
       { name: 'LABORATORIO', createdAt: new Date(), updatedAt: new Date() },
+      { name: 'EN EL CLIENTE', createdAt: new Date(), updatedAt: new Date() },
     ], {});
   },
 
