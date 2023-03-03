@@ -1,6 +1,6 @@
-const { Router } = require('express');
-const acquirerController = require('../controllers/acquirerController');
-const router = Router();
+const { Router } = require('express')
+const acquirerController = require('../controllers/acquirerController')
+const router = Router()
 
 router.post('/add', acquirerController.createAcquirer)
 router.get('/all', acquirerController.getAllAcquirers)

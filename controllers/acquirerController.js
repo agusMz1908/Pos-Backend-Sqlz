@@ -13,7 +13,6 @@ const createAcquirer = async (req, res) => {
 
     } catch (error) {
         console.log(error)
-        return res.status(500).json({ error: error.message })
     }
 }
 
@@ -36,7 +35,7 @@ const getAcquirerById = async (req, res) => {
             return res.status(200).json({ acqr })
         }
 
-        return res.status(404).send('Acquirer with that id not exist')
+        return res.status(404).json({ error: 'Acquirer with that id not exist' })
     } catch (error) {
         console.log(error)
     }
