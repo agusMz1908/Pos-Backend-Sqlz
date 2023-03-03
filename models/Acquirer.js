@@ -11,16 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Acquirer.hasMany(models.Device, {
-        foreignKey: 'acquirerID'
-      })
     }
   }
   Acquirer.init({
-    name: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      unique: true
+    }
   }, {
     sequelize,
     modelName: 'Acquirer',
+    tableName: 'acquirer'
   });
   return Acquirer;
 };

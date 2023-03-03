@@ -1,13 +1,18 @@
 {
-  "name": "pos-backend-sqlz",
+  "name": "proyecto-2.0",
   "version": "1.0.0",
-  "description": "Manejo Stock Pos",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon ./app"
   },
-  "author": "Agustin Muniz",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "node": "^19.6.1",
+    "nodemon": "^2.0.20"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -16,9 +21,5 @@
     "mysql2": "^3.1.2",
     "sequelize": "^6.29.0",
     "sequelize-cli": "^6.6.0"
-  },
-  "devDependencies": {
-    "node": "^19.6.1",
-    "nodemon": "^2.0.20"
   }
 }

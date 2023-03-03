@@ -11,26 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Device.belongsTo(models.Acquirer, {
-        foreignKey: 'id',
-        targetKey: 'acquirerID'
-      })
-      Device.belongsTo(models.Connection, {
-        foreignKey: 'id',
-        targetKey: 'connectionID'
-      })
-      Device.belongsTo(models.Location, {
-        foreignKey: 'id',
-        targetKey: 'locationID'
-      })
-      Device.belongsTo(models.Model, {
-        foreignKey: 'id',
-        targetKey: 'modelID'
-      })
-      Device.belongsTo(models.Status, {
-        foreignKey: 'id',
-        targetKey: 'statusID'
-      })
     }
   }
   Device.init({
@@ -45,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Device',
+    tableName: 'device'
   });
   return Device;
 };

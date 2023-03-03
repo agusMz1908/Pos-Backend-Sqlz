@@ -11,9 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Connection.hasMany(models.Device, {
-        foreignKey: 'connectionID'
-      })
     }
   }
   Connection.init({
@@ -21,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Connection',
+    tableName: 'connection'
   });
   return Connection;
 };
