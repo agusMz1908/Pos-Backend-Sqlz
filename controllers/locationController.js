@@ -8,8 +8,8 @@ const createLocation = async (req, res) => {
             return res.status(400).json({ error: 'That location alredy exist' })
         }
 
-        const location = await Location.create(req.body)
-        return res.status(201).json({ location })
+        const locn = await Location.create(req.body)
+        return res.status(201).json({ locn })
     } catch (error) {
         console.log(error)
     }

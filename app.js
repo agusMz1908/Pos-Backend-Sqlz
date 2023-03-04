@@ -5,6 +5,7 @@ require('dotenv').config()
 const acquirerRoutes = require('./routes/acquirerRoutes')
 const connectionRoutes = require('./routes/connectionRoutes')
 const locationRoutes = require('./routes/locationRoutes')
+const modelsRoutes = require('./routes/modeloRoutes')
 
 const app = express()
 app.use(morgan('dev'))
@@ -20,6 +21,7 @@ app.listen(port, '0.0.0.0', () => {
 app.use('/api/acquirer', acquirerRoutes)
 app.use('/api/connection', connectionRoutes)
 app.use('/api/location', locationRoutes)
+app.use('/api/models', modelsRoutes)
 
 app.get('/', (req, res) => {
     res.json({ message: 'Servidor Corriendo' })
