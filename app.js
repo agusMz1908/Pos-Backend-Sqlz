@@ -19,7 +19,7 @@ app.listen(port, '0.0.0.0', () => {
 
 app.use('/api/acquirer', acquirerRoutes)
 app.use('/api/connection', connectionRoutes)
-app.use('/api/location', connectionRoutes)
+app.use('/api/location', locationRoutes)
 
 app.get('/', (req, res) => {
     res.json({ message: 'Servidor Corriendo' })
