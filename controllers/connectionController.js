@@ -8,8 +8,8 @@ const createConnection = async (req, res) => {
             return res.status(400).json({ error: 'That type of connection alredy exists' })
         }
 
-        const connection = await Connection.create(req.body)
-        return res.status(201).json({ connection })
+        const conn = await Connection.create(req.body)
+        return res.status(201).json({ conn })
     } catch (error) {
         console.log(error)
     }
@@ -27,7 +27,7 @@ const getAllConnections = async (req, res) => {
 const getConnectionById = async (req, res) => {
     try {
         const { id } = req.params
-        const conn = await Connection.findOne({ where: { id: id } })
+        const conn = await Connection.findByPk(id)
 
         if (conn) {
             return res.status(200).json({ conn })
