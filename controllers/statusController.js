@@ -4,8 +4,8 @@ const createStatus = async (req, res) => {
     const { name } = req.body
     try {
         const existingStatus = await Status.findOne({ where: { name } })
-        if (existingLocation) {
-            return res.status(400).json({ error: 'That location alredy exist' })
+        if (existingStatus) {
+            return res.status(400).json({ error: 'That status alredy exist' })
         }
 
         const sts = await Status.create(req.body)
