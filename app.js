@@ -7,6 +7,7 @@ const connectionRoutes = require('./routes/connectionRoutes')
 const locationRoutes = require('./routes/locationRoutes')
 const modelsRoutes = require('./routes/modeloRoutes')
 const statusRoutes = require('./routes/statusRoutes')
+const deviceRoutes = require('./routes/deviceRoutes')
 
 const app = express()
 app.use(morgan('dev'))
@@ -24,6 +25,7 @@ app.use('/api/connection', connectionRoutes)
 app.use('/api/location', locationRoutes)
 app.use('/api/models', modelsRoutes)
 app.use('/api/status', statusRoutes)
+app.use('/api/device', deviceRoutes)
 
 app.get('/', (req, res) => {
     res.json({ message: 'Servidor Corriendo' })
